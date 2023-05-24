@@ -22,16 +22,11 @@ images.forEach((image) => {
       <img src="${image.url}" alt="${image.alt}" width = 300 height = auto>
     </li>
   `;
-  
 
-  
   galleryEl.insertAdjacentHTML('beforeend', liMarkup);
 });
 
-galleryEl.style.listStyle = 'none';
-galleryEl.style.display = 'flex';
-galleryEl.style.flexDirection = 'column-reverse';
-galleryEl.style.flexWrap = 'wrap';
-galleryEl.style.justifyContent = 'center';
-galleryEl.style.padding = '0';
-galleryEl.style.backgroundColor = 'red';
+// Підкажіть будь ласка, як правильно стилізувати ul.gallery? 
+// Змінювати розмітку неможна.
+
+
