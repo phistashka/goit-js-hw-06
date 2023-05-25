@@ -15,18 +15,13 @@ const images = [
 
 const galleryEl = document.querySelector('.gallery');
 
-images.forEach((image) => {
-  
-  const liMarkup = `
-    <li>
-      <img src="${image.url}" alt="${image.alt}" width = 300 height = auto>
-    </li>
-  `;
+const imagesHTML = images.map(image => `
+  <li class="style">
+    <img src="${image.url}" alt="${image.alt}" width = 300>
+  </li>
+`).join('');
 
-  galleryEl.insertAdjacentHTML('beforeend', liMarkup);
-});
 
-// Підкажіть будь ласка, як правильно стилізувати ul.gallery? 
-// Змінювати розмітку неможна.
+galleryEl.insertAdjacentHTML('beforeend', imagesHTML);
 
 
